@@ -140,36 +140,32 @@ function Header() {
             "motion-safe:opacity-100 motion-safe:translate-x-0",
             "motion-reduce:transition-none"
           ].join(" ")}
-          // If you want a slide on open, render with translate-x-2 first using a small microtask:
-          // onAnimationStart or a tiny setTimeout could toggle a 'menuMounted' local state to remove translate-x-2.
         >
-          {["home", "about", "property"].map((menu) => (
-            <div key={menu}>
-              <button
-                className="w-full text-left flex items-center justify-between hover:underline decoration-[#fed233] underline-offset-8 decoration-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fed233] focus-visible:ring-offset-2 rounded"
-                onClick={() => toggleSubMenu(menu)}
-              >
-                <span className="capitalize">{menu}</span>
-                <svg
-                  className={`w-4 h-4 ml-1 transition-transform ${openMenus[menu] ? "rotate-180" : ""}`}
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth={2}
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-            </div>
+          {[
+            { to: "/", label: "Home" },
+            { to: "/about", label: "About" },
+            { to: "/property", label: "Property" },
+          ].map((item) => (
+            <Link
+              key={item.label}
+              to={item.to}
+              onClick={() => setMenuOpen(false)} // ✅ closes menu after click
+              className="block w-full text-left hover:underline decoration-[#fed233] underline-offset-8 decoration-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fed233] focus-visible:ring-offset-2 rounded py-2"
+            >
+              {item.label}
+            </Link>
           ))}
+
           <Link
             to="/contact"
+            onClick={() => setMenuOpen(false)} // ✅ also close menu after clicking Contact
             className="w-full inline-block text-center bg-[#fed233] text-[#23313b] py-2 rounded shadow-md font-semibold hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fed233] focus-visible:ring-offset-2 transition"
           >
             Contact Us
           </Link>
         </div>
       )}
+
     </header>
   );
 }
