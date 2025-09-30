@@ -17,7 +17,8 @@ const App = () => {
   return (
     <>
     <Header />
-    <div >
+{/*     
+     <div className='' >
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/about' element={<About/>}/>
@@ -25,18 +26,18 @@ const App = () => {
         <Route path='/neighbourhood' element={<Neighbourhood/>}/>
         <Route path='/buidingammenties' element={<BuildingAmenities/>}/>
         <Route path='/newsFeed' element={<NewsFeed/>}/>
-
       </Routes>
-      <Home />
+    </div> */}
+
+
+
+     { <Home />}
       <About />
-      <UpcomingProject />
-      {/* <Services/> */}
+      <UpcomingProject /> 
       <Neighbourhood/>
       <BuildingAmenities/>
       <NewsFeed/>
-       {/* <AvailabilityTable /> */}
-    </div>
-    <Footer/>
+    <Footer/> 
     </>
   )
 }

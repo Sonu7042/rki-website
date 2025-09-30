@@ -10,7 +10,7 @@ import about_elan_3 from "../assets/about_elan_3.webp";
 
 function About() {
   return (
-    <section className="w-full bg-gradient-to-b from-[#f5f9fd] to-white py-16 mt-5">
+    <section className="w-full bg-gradient-to-b from-[#f5f9fd] to-white py-16  px-4">
       {/* Section heading */}
       <p className="text-[#fed233] font-semibold mb-0 text-3xl text-center">About Us</p>
 

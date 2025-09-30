@@ -6,7 +6,7 @@ import upcoming_project_2 from '../assets/upcoming_project_elan_2.jpg'
 const UpcomingProject = () => {
   return (
     <>
-      <section className="py-12 bg-white h-[100vh]">
+      <section className="py-12 bg-white h-[100vh] px-4">
         {/* Background Section */}
         <div className="relative w-full mx-auto">
           {/* Main Background Image + Text Overlay */}
@@ -85,12 +85,12 @@ const UpcomingProject = () => {
                 </li>
               </ul>
 
-              <button
+              {/* <button
                 className="bg-[#fed233] text-[#23313b] font-semibold px-5 py-2 rounded transition hover:brightness-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#fed233] focus-visible:ring-offset-2"
                 type="button"
               >
                 Download Brochure
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
