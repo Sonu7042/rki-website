@@ -44,7 +44,7 @@ function Header() {
             src={rki_logo}
             alt="Oxford Logo"
             className={[
-              "block h-7 md:h-8 w-auto object-contain",
+              "block h-7 md:h-12 w-auto object-contain",
               "motion-safe:transition-all motion-safe:duration-500 motion-safe:ease-out",
               mounted ? "motion-safe:opacity-100 motion-safe:translate-x-0" : "motion-safe:opacity-0 motion-safe:translate-x-2",
               "motion-safe:delay-100",

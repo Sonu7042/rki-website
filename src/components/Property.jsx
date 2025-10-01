@@ -37,38 +37,39 @@ const Property = () => {
     return () => cancelAnimationFrame(id);
   }, []);
 
-  const properties = [
-    {
-      imgSrc: property1,
-      title: "Luxury Apartment Downtown",
-      subtitle: "Modern apartment with city views and amenities.",
-    },
-    {
-      imgSrc: property2,
-      title: "Suburban Family Home",
-      subtitle: "Spacious 4-bedroom home with backyard.",
-    },
-    {
-      imgSrc: property3,
-      title: "Cozy Condo by the Lake",
-      subtitle: "Affordable condo with beautiful lake views.",
-    },
-    {
-      imgSrc: property4,
-      title: "Beachfront Villa",
-      subtitle: "Luxurious villa with private pool and beach access.",
-    },
-    {
-      imgSrc: property5,
-      title: "Downtown Studio",
-      subtitle: "Compact and stylish studio in the heart of the city.",
-    },
-    {
-      imgSrc: property6,
-      title: "Mountain Cabin Retreat",
-      subtitle: "Rustic cabin surrounded by nature and hiking trails.",
-    },
-  ];
+ const properties = [
+  {
+    imgSrc: property1,
+    title: "Luxury Apartment Downtown",
+    subtitle: "Modern apartment with panoramic city views, premium finishes, and access to world-class amenities including a rooftop pool and fitness center.",
+  },
+  {
+    imgSrc: property2,
+    title: "Suburban Family Home",
+    subtitle: "Spacious 4-bedroom home with a private backyard, open-plan kitchen, and located in a safe neighborhood near top schools and parks.",
+  },
+  {
+    imgSrc: property3,
+    title: "Cozy Condo by the Lake",
+    subtitle: "Affordable lakeside condo featuring large windows, serene water views, and walking distance to cafes, trails, and community spaces.",
+  },
+  {
+    imgSrc: property4,
+    title: "Beachfront Villa",
+    subtitle: "Luxurious villa with direct beach access, a private infinity pool, spacious outdoor lounge, and stunning ocean sunsets every evening.",
+  },
+  {
+    imgSrc: property5,
+    title: "Downtown Studio",
+    subtitle: "Compact yet stylish studio in the heart of the city, perfect for professionals, with smart storage solutions and vibrant nightlife nearby.",
+  },
+  {
+    imgSrc: property6,
+    title: "Mountain Cabin Retreat",
+    subtitle: "Rustic wooden cabin surrounded by nature, offering peaceful seclusion, a cozy fireplace, and access to hiking and adventure trails.",
+  },
+];
+ 
 
   return (
     <section className="py-18 px-4 bg-gray-100">

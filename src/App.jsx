@@ -41,18 +41,6 @@ const App = () => {
         <Route path='/contact' element={<Contact/>}/>
       </Routes>
     <Footer/> 
-
-
-
-     {/* { <Home />}
-      <About />
-      <UpcomingProject /> 
-      <Neighbourhood/>
-      <BuildingAmenities/>
-      <NewsFeed/>
-      <Property/> */}
-      
-      
     </>
   )
 }
