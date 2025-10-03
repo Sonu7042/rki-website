@@ -23,6 +23,7 @@ const SubHome=()=>{
     <>
     <Home />
     <About />
+    <Service/>
     <UpcomingProject />
     <Neighbourhood />
     <BuildingAmenities />
