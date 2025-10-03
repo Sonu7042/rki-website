@@ -10,6 +10,8 @@ import UpcomingProject from './components/UpcomingProject'
 import {Routes, Route} from 'react-router-dom'
 import Property from './components/Property'
 import Contact from './components/Contact'
+import Service from './components/Service'
+
 
 
 
@@ -39,6 +41,7 @@ const App = () => {
         <Route path='/about' element={<About/>}/>
         <Route path='/property' element={<Property/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/service' element={<Service/>}/>
       </Routes>
     <Footer/> 
     </>

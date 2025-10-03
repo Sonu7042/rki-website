@@ -57,10 +57,10 @@ function Home() {
   >
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight sm:leading-snug text-white">
       {/* Luxury Homes, <br /> Crafted for You */}
-      Turning Your Property Dreams into Reality with Team RKI
+      Welcome to Team RKI — Where Real Estate Meets Integrity
     </h1>
     <p className="border-l-2 border-white/30 pl-4 text-white/90 text-base sm:text-lg max-w-md">
-     Trusted real estate advisors committed to helping you buy, sell, or invest with confidence.
+     Your trusted partner for buying, selling, and investing in property across India.
     </p>
   </div>
 </section>

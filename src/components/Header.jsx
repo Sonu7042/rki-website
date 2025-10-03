@@ -59,7 +59,8 @@ function Header() {
           {[
             { to: "/", label: "Home", delay: "delay-150" },
             { to: "/about", label: "About", delay: "delay-200" },
-            { to: "/property", label: "Property", delay: "delay-300" }
+            { to: "/property", label: "Property", delay: "delay-300" },
+            { to: "/service", label: "Service", delay: "delay-400" }
           ].map((item) =>
             item.to ? (
               <Link

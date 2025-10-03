@@ -46,32 +46,58 @@ function About() {
           ].join(" ")}
         >
           <h2 className="font-bold text-3xl sm:text-4xl text-[#23313b] leading-snug mb-2">
-            Building Dreams, One <br /> Home at a Time
+            {/* Building Dreams, One <br /> Home at a Time */}
+            Crafting Homes, Creating Futures
           </h2>
 
           <div className="text-gray-500 text-base sm:text-lg mb-8">
-            At Team Real Kay Investments (Team RKI), we believe real estate is more than just transactions — it’s about building futures. Founded on the principles of trust, integrity, and personalized service, we guide our clients through every step of their property journey. With deep local knowledge and a dedication to results, we strive to make your experience seamless — whether you're entering the market for the first time or expanding your investment portfolio.
+            At Team Real Kay Investments (Team RKI), we do more than just deal
+            in properties — we help people shape the life they’ve always dreamed
+            of. Every project we take on is guided by our commitment to honesty,
+            innovation, and personal attention. With a strong understanding of
+            the local market and a passion for excellence, we ensure every
+            client feels confident, supported, and valued — whether it’s a first
+            home, a dream upgrade, or a smart investment for the future.
           </div>
 
           {/* Features */}
           <div className="space-y-6">
             <div className="flex items-start gap-6 border border-[#fed233]/30 rounded-md p-6 bg-white">
-              <span className="text-[#fed233]">
-                {/* SVG icon */}
-              </span>
+              <span className="text-[#fed233]">{/* SVG icon */}</span>
               <div>
-                <h4 className="text-lg font-bold text-[#23313b] mb-2">Innovative Design & Architecture</h4>
-                <p className="text-gray-500 text-sm">Global trends blended with local excellence.</p>
+                <h4 className="text-lg font-bold text-[#23313b] mb-2">
+                  Innovative Design & Architecture
+                </h4>
+                <p className="text-gray-500 text-sm">
+                  Blending global inspiration with local expertise to create
+                  spaces that are modern, functional, and timeless.
+                </p>
               </div>
             </div>
 
             <div className="flex items-start gap-6 border border-[#fed233]/30 rounded-md p-6 bg-white">
-              <span className="text-[#fed233]">
-                {/* SVG icon */}
-              </span>
+              <span className="text-[#fed233]">{/* SVG icon */}</span>
               <div>
-                <h4 className="text-lg font-bold text-[#23313b] mb-2">Quality Construction</h4>
-                <p className="text-gray-500 text-sm">Superior materials and meticulous execution.</p>
+                <h4 className="text-lg font-bold text-[#23313b] mb-2">
+                  Quality Construction
+                </h4>
+                <p className="text-gray-500 text-sm">
+                  We emphasize durability, precision, and superior materials —
+                  ensuring every home is built to last and bring peace of mind.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-6 border border-[#fed233]/30 rounded-md p-6 bg-white">
+              <span className="text-[#fed233]">{/* SVG icon */}</span>
+              <div>
+                <h4 className="text-lg font-bold text-[#23313b] mb-2">
+                  Customer-Centric Approach
+                </h4>
+                <p className="text-gray-500 text-sm">
+                  Your vision drives our process. We listen, adapt, and deliver
+                  homes that fit your lifestyle and aspirations.
+                </p>
               </div>
             </div>
           </div>
@@ -91,13 +117,30 @@ function About() {
             "motion-reduce:transition-none motion-reduce:opacity-100 motion-reduce:translate-x-0",
           ].join(" ")}
         >
-          <span className="text-[#fed233] font-semibold mb-3">Building Facilities</span>
+          <span className="text-[#fed233] font-semibold mb-3">
+            Building Facilities
+          </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5 leading-snug">
-            Making living spaces <br /> More Beautiful
+            Making Living Spaces <br /> More Beautiful
           </h1>
           <p className="mb-7 text-[#5a6973] text-base max-w-xl">
-            Over 39,000 people work for us in more than 70 countries all over the world.
-            This breadth of global coverage, combined with specialist services.
+            At <span className="font-semibold text-[#294287]">Team RKI</span>,
+            we go beyond just real estate transactions – we help you find a home
+            that reflects your lifestyle. With a strong network of trusted
+            builders and exclusive property listings, we bring you the best
+            residential and commercial spaces in the market.
+          </p>
+
+          <ul className="text-[#5a6973] text-base space-y-3 mb-7 max-w-xl">
+            <li>• Curating premium properties in prime locations</li>
+            <li>• Ensuring transparent and hassle-free deals</li>
+            <li>• Delivering personalized guidance for every client</li>
+          </ul>
+
+          <p className="text-[#5a6973] text-base max-w-xl">
+            With <span className="font-semibold text-[#294287]">Team RKI</span>{" "}
+            by your side, finding your dream property becomes simple, secure,
+            and satisfying.
           </p>
         </div>
 

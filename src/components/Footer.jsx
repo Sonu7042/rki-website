@@ -105,7 +105,7 @@ const Footer = () => {
                 href="mailto:example@example.com"
                 className="underline hover:text-[#fed233] focus:outline-none focus:ring-2 focus:ring-[#fed233] rounded"
               >
-                example@example.com
+                example@example.com 
               </a>
             </li>
           </ul>
