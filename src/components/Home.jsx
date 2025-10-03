@@ -56,10 +56,11 @@ function Home() {
     ].join(" ")}
   >
     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight sm:leading-snug text-white">
-      Luxury Homes, <br /> Crafted for You
+      {/* Luxury Homes, <br /> Crafted for You */}
+      Turning Your Property Dreams into Reality with Team RKI
     </h1>
     <p className="border-l-2 border-white/30 pl-4 text-white/90 text-base sm:text-lg max-w-md">
-      Elan Sector 49 Gurgaon is a leading residential development within the Sohna Road area.
+     Trusted real estate advisors committed to helping you buy, sell, or invest with confidence.
     </p>
   </div>
 </section>

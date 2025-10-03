@@ -43,11 +43,11 @@ const BuildingAmenities = () => {
       {/* Top banner */}
       <div className="max-w-7xl mx-auto rounded-md overflow-hidden bg-[#f6fbfc] relative mt-10">
         <div className="relative h-52 sm:h-64 md:h-72 w-full flex items-center bg-gray-800">
-          <img src={amenities2} alt="Banner" className="absolute h-full w-full object-cover opacity-70" />
+          <img src={amenities2} alt="Banner" className="absolute h-full w-full object-cover opacity-70"/>
           <div className="relative z-10 px-4 sm:px-8 py-4 sm:py-8">
             <span className="text-white text-xs font-semibold block mb-2 opacity-90">Client'S Testimonial</span>
             <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-white leading-tight">
-              See What,s Our Client <br className="block sm:hidden" />
+              See What,s Our Client<br className="block sm:hidden"/>
               Says About Us
             </h2>
           </div>
@@ -89,7 +89,7 @@ const BuildingAmenities = () => {
                     {item.role}
                   </div>
                 </div>
-                <StarRating count={item.stars} />
+                <StarRating count={item.stars}/>
               </div>
               <div className="text-[#888c94] text-[10px] sm:text-xs md:text-sm">
                 {item.text}
@@ -103,3 +103,6 @@ const BuildingAmenities = () => {
 };
 
 export default BuildingAmenities;
+
+
+

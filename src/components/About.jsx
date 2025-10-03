@@ -50,7 +50,7 @@ function About() {
           </h2>
 
           <div className="text-gray-500 text-base sm:text-lg mb-8">
-            At Oxford Realtors, we create modern, elegant homes with uncompromising quality. Our team delivers projects blending innovative design, sustainable practices, and on-time execution. From luxury apartments to custom villas, we turn your vision into reality with a customer-first approach.
+            At Team Real Kay Investments (Team RKI), we believe real estate is more than just transactions — it’s about building futures. Founded on the principles of trust, integrity, and personalized service, we guide our clients through every step of their property journey. With deep local knowledge and a dedication to results, we strive to make your experience seamless — whether you're entering the market for the first time or expanding your investment portfolio.
           </div>
 
           {/* Features */}

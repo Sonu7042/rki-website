@@ -1,19 +1,44 @@
 import React, { useEffect, useState } from "react";
-import img1 from "../assets/Home_pics/img1.jpg";
-import img2 from "../assets/Home_pics/img2.jpg";
-import img3 from "../assets/Home_pics/img3.jpg";
 import neibour_elan_1 from "../assets/neibour_elan_1.webp";
 import neibour_elan_2 from "../assets/neibour_elan_2.webp";
 
-const thumbnails = [neibour_elan_1, neibour_elan_2];
+const slides = [
+  {
+    img: neibour_elan_1,
+    title: "Shopping Center",
+    distance: "1,500 m / 21 min walk",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore magna aliqua.",
+    points: [
+      "Cafes, eateries, and daily needs within walking distance",
+      "Family-friendly parks and open spaces nearby",
+      "Excellent last-mile connectivity to public transit",
+    ],
+  },
+  {
+    img: neibour_elan_2,
+    title: "Community Park",
+    distance: "800 m / 10 min walk",
+    desc: "Enjoy lush greenery and open play areas for children and families.",
+    points: [
+      "Jogging and cycling tracks",
+      "Children's play zones and picnic spots",
+      "Weekend community events and activities",
+    ],
+  },
+];
 
 const Neighbourhood = () => {
-  const [mounted, setMounted] = useState(false);
+  const [activeIdx, setActiveIdx] = useState(0);
 
+  // Auto-slide every 5s
   useEffect(() => {
-    const id = requestAnimationFrame(() => setMounted(true));
-    return () => cancelAnimationFrame(id);
+    const interval = setInterval(() => {
+      setActiveIdx((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
   }, []);
+
+  const activeSlide = slides[activeIdx];
 
   return (
     <section className="py-10 bg-[#f6fbfc]">
@@ -28,61 +53,69 @@ const Neighbourhood = () => {
           Explore Below
         </h2>
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-12">
-          {/* Left: Image */}
-          <div
-            className={`lg:col-span-2 w-full transition-opacity transition-transform duration-700 ease-out
-              ${mounted ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"}`}
-          >
-            <div className="relative overflow-hidden rounded-lg mb-6 aspect-video">
-              <img
-                src={neibour_elan_1}
-                alt="Main building"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
-          </div>
-
-          {/* Right: Card */}
-          <div
-            className={`w-full transition-opacity transition-transform duration-700 ease-out
-              ${mounted ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"}`}
-          >
-            <div className="bg-white rounded-lg shadow-lg border border-[#fed233]/20 transition-shadow hover:shadow-xl overflow-hidden">
-              {/* Card Image */}
-              <div className="relative aspect-video">
+        {/* Grid Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 bg-white rounded-lg overflow-hidden">
+          {/* Image Section */}
+          <div className="lg:col-span-2 relative w-full">
+            <div className="relative overflow-hidden aspect-video rounded-lg">
+              <div
+                key={activeIdx}
+                className="absolute inset-0 transform transition-transform duration-700 ease-in-out translate-x-0"
+              >
                 <img
-                  src={img2}
-                  alt="Shopping Center"
-                  className="absolute inset-0 w-full h-full object-cover"
+                  src={activeSlide.img}
+                  alt={activeSlide.title}
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute top-3 left-3 bg-white/80 rounded px-3 py-1 text-xs font-medium shadow-sm">
-                  5 PROPERTIES
-                </div>
-              </div>
-
-              {/* Card Content */}
-              <div className="px-5 py-4 sm:px-6">
-                <h3 className="font-bold text-lg sm:text-xl mb-1">
-                  Shopping Center
-                </h3>
-                <p className="text-[#fed233] text-sm sm:text-base mb-2">
-                  1,500 m{" "}
-                  <span className="ml-2 text-[#888c94]">/ 21 min walk</span>
-                </p>
-                <p className="text-gray-500 text-sm sm:text-base mb-4 leading-relaxed">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore magna aliqua.
-                </p>
-                <a
-                  href="#"
-                  className="text-[#fed233] font-medium text-sm sm:text-base hover:underline rounded focus:outline-none focus:ring-2 focus:ring-[#fed233] focus:ring-offset-2"
-                >
-                  View Property <span className="ml-1">&rarr;</span>
-                </a>
               </div>
             </div>
           </div>
+
+          {/* Content Section */}
+          <div className="relative w-full flex items-center">
+            <div
+              key={activeIdx + "-content"}
+              className="w-full transform transition-transform duration-700 ease-in-out translate-x-0 px-5 py-6 sm:px-6 sm:py-8"
+            >
+              <h3 className="font-bold text-xl sm:text-2xl mb-2 text-[#212121]">
+                {activeSlide.title}
+              </h3>
+
+              <p className="text-[#fed233] text-sm sm:text-base mb-3">
+                {activeSlide.distance}
+              </p>
+
+              <p className="text-gray-600 text-sm sm:text-base mb-5 leading-relaxed">
+                {activeSlide.desc}
+              </p>
+
+              <ul className="text-sm sm:text-base text-gray-700 space-y-2 mb-6">
+                {activeSlide.points.map((point, i) => (
+                  <li key={i}>• {point}</li>
+                ))}
+              </ul>
+
+              <a
+                href="#"
+                className="inline-flex items-center justify-center rounded bg-[#294287] text-white px-4 py-2 text-sm sm:text-base hover:bg-[#23386e] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#294287]"
+              >
+                View Property <span className="ml-2">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Dots Navigation for Mobile */}
+        <div className="flex justify-center mt-6 space-x-2 lg:hidden">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setActiveIdx(idx)}
+              className={`w-3 h-3 rounded-full ${
+                activeIdx === idx ? "bg-[#294287]" : "bg-gray-300"
+              }`}
+            ></button>
+          ))}
         </div>
       </div>
     </section>
